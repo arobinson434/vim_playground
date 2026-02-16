@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/root/test/build",
+  "command": "/usr/bin/c++    -o CMakeFiles/testProj.dir/test.cpp.o -c /root/test/test.cpp",
+  "file": "/root/test/test.cpp",
+  "output": "CMakeFiles/testProj.dir/test.cpp.o"
+}
+]
