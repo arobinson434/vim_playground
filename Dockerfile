@@ -1,13 +1,12 @@
 FROM almalinux:10.1
 
-RUN dnf install -y git vim clang-devel
+RUN dnf install -y git vim clang-devel wget
 
-RUN mkdir -p ~/.vim/pack/git-plugins/start
-RUN git clone --depth 1 https://github.com/dense-analysis/ale.git ~/.vim/pack/git-plugins/start/ale
-RUN vim -u NONE -c "helptags /root/.vim/pack/git-plugins/start/ale/doc" -c q
-
-COPY vimrc /root/.vim/vimrc
 COPY test/ /root/test/
+COPY vimrc /root/
+COPY init_vim.sh /root/
+
+RUN /root/init_vim.sh
 
 ENV TERM xterm-256color
 
