@@ -25,3 +25,32 @@ cabbrev gtdt ALEGoToDefinition -tab
 cabbrev gti  ALEGoToImplementation
 cabbrev gtit ALEGoToImplementation -tab
 cabbrev fr   ALEFindReference
+
+let no_markdown_prompt = "You are a precise coding assistant. Output raw code ONLY. Do not wrap the code in markdown code blocks like ``` or ```lang. No explanations, no introduction, no markdown."
+
+let g:vim_ai_complete = {
+\  "prompt" : no_markdown_prompt,
+\  "options": {
+\    "endpoint_url": "http://192.168.1.40:8080/v1/chat/completions",
+\    "model": "local-model",
+\    "auth_type": "none",
+\   }
+\ }
+
+let g:vim_ai_edit = {
+\  "prompt" : no_markdown_prompt,
+\  "options": {
+\    "endpoint_url": "http://192.168.1.40:8080/v1/chat/completions",
+\    "model": "local-model",
+\    "auth_type": "none",
+\   }
+\ }
+
+let g:vim_ai_chat = {
+\  "options": {
+\    "endpoint_url": "http://192.168.1.40:8080/v1/chat/completions",
+\    "model": "local-model",
+\    "auth_type": "none",
+\  }
+\}
+

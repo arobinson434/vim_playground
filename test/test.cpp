@@ -4,7 +4,6 @@
 
 void foo() {
     std::cout << "sdfsd";
-    
 }
 
 int main() {
